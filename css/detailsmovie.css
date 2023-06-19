@@ -198,11 +198,39 @@ nav {
     padding-top: 70px;
     font-weight: bolder;
 }
+.date-location {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+
+.date-location #date{
+    width: 284px;
+    height: 56px;
+    background-color: #EFF0F6;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+}
+
+
+.date-location #location {
+    width: 284px;
+    height: 56px;
+    background-color: #EFF0F6;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+}
 .studio-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 32px;
+    align-items: center;
+    align-content: center;
 }
 .studio-details {
     display: flex;
@@ -216,7 +244,7 @@ nav {
 .studio-img {
     margin-right: 47px;
     margin-top: 24px;
-    height: 40px;
+    height: auto;
     width: auto;
 }
 .studio{
@@ -275,10 +303,36 @@ nav {
 .book-now:hover{
     cursor: pointer;
 }
-hr{
-    color: black;
+
+.view-more {
+    position: relative;
+    color: #5F2EEA;
+    margin-bottom: 64px;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
+.view-more:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 523px;
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    background: #DEDEDE;
+}
+
+.view-more:after {
+    content: "";
+    display: block;
+    width: 523px;
+    height: 2px;
+    background: #DEDEDE;
+    right: 130px;
+    top: 50%;
+    position: absolute;
+}
 
 /* footer */
 
@@ -347,4 +401,74 @@ footer .copyright {
     margin-bottom: 47px;
     font-size: 14px;
     color: #4E4B66;
+}
+
+@media screen and (max-width:500px) {
+    nav {
+        display: none;
+    }
+    .movie-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .movie-container .movie-logo {
+        margin-left: 0;
+        width: 100%;
+    }
+    .movie-logo .box {
+        width: 332px;
+        height: 458px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .genre h3 {
+        font-size: 16px;
+    }
+
+    .details-container .details .header {
+        font-size: 13px;
+    }
+
+    .details-container .details p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .date-location {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .studio:nth-child(n+3) {
+        display: none;
+    }
+    .view-more:after {
+        width: 95px;
+    }
+
+    .view-more::before{
+        width: 95px;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    .sponsor{
+        flex-direction: row;
+    }
+    .social-media{
+        flex-direction: row;
+        display: flex;
+    }
+    .social-media .socmed p {
+        display: none;
+    }
 }

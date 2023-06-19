@@ -59,29 +59,57 @@ body {
   }
 
   .poster {
+    position: relative;
     width: 70%;
-    background-image: url(../img/image\ 1.png);
+    height: 1024px;
+    background-image: url("../img/image 1.png");
     background-size: cover;
     background-position: center;
-    flex: 1;
   }
-
-  .poster .caption {
-    position: relative;
+  
+  .poster img {
+    display: block;
+    width: 100%;
+    height: 1024px;
+    background-size: cover;
+    background-position: center;
+  }
+  .poster::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 21, 107, 0.8);
+  }
+  
+  .caption {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
+  }
+  
+  .caption img {
+    width: 500px; 
+    height: auto;
+  }
+  
+  .caption h2 {
+    margin-top: 10px; 
     font-size: 48px;
-    color:#FFFFFFCC;
+    color: #FFFFFF;
   }
     .form-card {
     width: 30%;
     text-align: center;
     padding: 45px;
     }
-
+.form-title .logo {
+  display: none;
+}
   .form-title {
     text-align: left;
   }
@@ -141,4 +169,21 @@ form p {
 
 form p a {
     color: #5F2EEA;
+}
+
+@media screen and (max-width:500px){
+  .poster {
+    display: none;
+  }
+
+  .form-title .logo {
+    display: block;
+  }
+  .form-title h2 {
+    font-size: 26px;
+    margin-top: 46px;
+  }
+  .form-card {
+    width: 100%;
+  }
 }
