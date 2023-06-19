@@ -52,6 +52,14 @@ table {
 }
 
 /* navbar */
+.menu-dropdown {
+    display: none;
+  }
+  
+.menu-btn {
+    display: none;
+  }
+  
 nav {
     display: flex;
     flex-direction: row ;
@@ -404,31 +412,83 @@ footer .copyright {
 }
 
 @media screen and (max-width:500px) {
-    nav {
+    /* NAVBAR SECTION */
+    .logo img {
+        margin-left: 24px;
+    }
+    .menu {
         display: none;
     }
+    .right-section {
+        display: none;
+    }
+    .menu-btn {
+        margin-right: 39px;
+        cursor: pointer;
+        display: block;
+    }
+    .menu-dropdown {
+        display: none;
+        width: 100%;
+        background-color: #FFFFFF;
+        position:absolute;
+        top: 15%;
+      }
+    .menu-dropdown.show-dropdown {
+        display: block;
+      }
+    .menu-dropdown li, .menu-dropdown p {
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Mulish', sans-serif;
+        text-decoration: none;
+        border: 1px solid #DEDEDE;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-weight: bold;
+        color: black;
+
+    }
+    li a {
+        text-decoration: none;
+    }
+/* 
+    MOVIE CONTAINER SECTION */
     .movie-container{
         display: flex;
         flex-direction: column;
         align-items: center;
         align-content: center;
+   
     }
 
     .movie-container .movie-logo {
         margin-left: 0;
-        width: 100%;
+        margin-right: 25%;
+  
+        margin-bottom: 32px;
     }
     .movie-logo .box {
-        width: 332px;
-        height: 458px;
+        width: 223px;
+        height: 308px;
     }
-
+    .box .movie-banner{
+        width: auto;
+        height: auto;
+    }
+    .movie-details{
+        display: flex;
+        flex-direction: column;
+    }
     .title h1 {
         font-size: 20px;
+        text-align: center;
     }
 
     .genre h3 {
         font-size: 16px;
+        text-align: center;
     }
 
     .details-container .details .header {
