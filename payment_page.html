@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Payment Page</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5F2EEA',
+                        secondary: '#D6D8E7',
+                        horizontal: '#DEDEDE',
+                        button: '#00BA88',
+                    }, 
+                    spacing : {
+                        '105' : '26.25rem',
+                    },
+                    fontFamily : {
+                        'sans': ['Mulish','sans-serif'],
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-5">
+            <div class=" md:flex md:gap-x-12 items-center justify-between">
+                <a href="home.html">
+                    <img class="md:h-12 h-10 md:w-auto" src="./img/Vector.png" alt="logo">
+                </a>
+                <div class="hidden md:flex md:gap-x-12">
+                    <a href="" class="text-sm font-medium text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="" class="text-sm font-medium text-gray-700 hover:text-gray-900">List Movie</a>
+                </div>
+            </div>
+            <div class="hidden lg:flex lg:justify-end ">
+                <a href="" class="text-sm inline-block rounded-md bg-primary border border-transparent px-8 py-3 text-center text-white">Sign Up</a>
+            </div>
+            <div class="flex justify-end lg:hidden">
+                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+        </nav>
+    </header>
+
+    <main class="bg-secondary flex flex-row px-18 py-14 justify-center pr-12 pl-12 gap-x-8">
+        <div class="info w-2/3 bg-secondary gap-y-12 flex flex-col">
+            <h1 class="text-2xl text-black font-bold">Payment Info</h1>
+            <div class="w-full bg-white rounded-lg border-transparent border flex flex-col gap-y-7 px-10 py-12">
+                <div class="flex flex-row justify-between">
+                    <h3 class="text-xl text-gray-400 font-sans">Date & time</h3>
+                    <p class="text-xl text-black font-sans">Tuesday, 07 July 2020 at 02:00</p>
+                </div>
+                <div class="border-b border-gray-300 h-px"></div>
+                <div class="flex flex-row justify-between">
+                    <h3 class="text-xl text-gray-400 font-sans">Movie title</h3>
+                    <p class="text-xl text-black font-sans">Spider-Man: Homecoming</p>
+                </div>
+                <div class="border-b border-gray-300 h-px"></div>
+                <div class="flex flex-row justify-between">
+                    <h3 class="text-xl text-gray-400 font-sans">Cinema name</h3>
+                    <p class="text-xl text-black font-sans">CineOne21 Cinema</p>
+                </div>
+                <div class="border-b border-gray-300 h-px"></div>
+                <div class="flex flex-row justify-between">
+                    <h3 class="text-xl text-gray-400 font-sans">Number of tickets</h3>
+                    <p class="text-xl text-black font-sans">3 pieces</p>
+                </div>
+                <div class="border-b border-gray-300 h-px"></div>
+                <div class="flex flex-row justify-between">
+                    <h3 class="text-xl text-gray-400 font-sans">Total Payment</h3>
+                    <p class="text-xl text-black font-sans">$30,00</p>
+                </div>
+            </div>
+            <h1 class="text-2xl text-black font-bold">Choose a Payment Method</h1>
+            <div class="w-full bg-white rounded-lg border-transparent border flex flex-col gap-y-7 ">
+                <div class="w-full flex flex-row  gap-y-8 flex-wrap px-10 py-12 gap-x-12 ">
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment1.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment2.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment3.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment4.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment5.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment6.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment7.png" alt="">
+                    </div>
+                    <div class="w-1/5 h-14 bg-transparent border-2 border-gray rounded-lg flex justify-center items-center hover:cursor-pointer">
+                        <img src="img/payment8.png" alt="">
+                    </div>
+                </div>
+                <div class="flex items-center mb-7 px-10 ">
+                    <div class="flex-grow border-t border-gray-300 mr-4"></div>
+                    <span class="font-bold text-gray-500">or</span>
+                    <div class="flex-grow border-t border-gray-300 ml-4"></div>
+                </div>
+                <p class="text-center font-sans text-gray-400 pb-14"> Pay via cash. <a href="#" class="text-primary font-bold">See how it work</a></p>
+            </div>
+            <div class="flex flex-row justify-between">
+                <a href="" class="w-1/3 h-14 inline-block flex justify-center items-center border-2 bg-transparent font-bold border-primary text-primary cursor-pointer">Previous Step</a>
+                <a href="" class="w-1/3 h-14 inline-block flex justify-center items-center bg-primary text-white font-bold cursor-pointer">Pay your order</a>
+            </div>
+        </div>
+        
+    </div>
+
+
+        <div class="order w-1/3 bg-secondary rounded-lg border-transparent border flex flex-col gap-y-12">
+            <h1 class="text-2xl text-black font-bold">Personal Info</h1>
+            <div class="box-border w-full bg-white rounded-lg py-12 px-10 flex flex-col gap-y-8">
+                <div>
+                    <p class="font-sans mb-3 text-gray-400">Full Name</p>
+                    <input type="text" class="w-full px-3 py-3 border border-gray roudned-md" placeholder="Jonas El Rodriguez">
+                </div>
+                <div>
+                    <p class="font-sans mb-3 text-gray-400">Email</p>
+                    <input type="text" class="w-full px-3 py-3 border border-gray roudned-md" placeholder="Jonasrodri123@gmail.com">
+                </div>
+                <div>
+                    <p class="font-sans mb-3 text-gray-400">Phone Number</p>
+                    <input type="text" class="w-full px-3 py-3 border border-gray roudned-md" placeholder="+6282123456789">
+                </div>
+                <div class="flex flex-row px-8 py-3 gap-x-6 bg-yellow-100 w-full">
+                    <img src="img/warning.png" alt="">
+                    <p>Fill your data correctly.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-white flex flex-col ">
+        <div class="flex flex-row justify-around pt-24">
+          <div>
+              <img src="./img/Vector.png" alt="logo" class="mb-4">
+              <p class="text-grey-400">Stop waiting in line. Buy tickets <br>conveniently, watch movies quietly</p>
+          </div>
+          <div class="flex flex-col">
+              <h3 class="font-medium mb-8">Explore</h3>
+              <a href="" class="mb-4">Home</a>
+              <a href="">List Movie</a>
+          </div>
+          <div>
+              <h3 class="font-medium mb-8">Our Sponsor</h3>
+              <img src="./img/sponsor1.png" alt="" class="mb-6">
+              <img src="./img/sponsor2.png" alt="" class="mb-6" >
+              <img src="./img/sponsor3.png" alt="">
+          </div>
+          <div class="social-media">
+              <h3 class="font-medium mb-8">Follow us</h3>
+              <div class="flex gap-x-4 mb-6">
+                  <img src="./img/fb.png" >
+                  <p>Tickitz Cinema id</p>
+              </div>
+              
+              <div class="flex gap-x-4 mb-6">
+                  <img src="/img/instagram.png" >
+                  <p>tickitz.id</p>
+              </div>
+              
+              <div class="flex gap-x-4 mb-6">
+                  <img src="/img/twitter.png" >
+                  <p>tickitz.id</p>
+              </div>
+              
+              <div class="flex gap-x-4 ">
+                  <img src="/img/youtube.png" >
+                  <p>Tickitz Cinema id</p>
+              </div>
+          </div>
+        </div>
+        <p class="text-center pb-12 pt-12">&#169; 2020 Tickitz. All Rights Reserved</p>
+      </footer>
+</body>
+</html>
