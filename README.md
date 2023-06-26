@@ -14,5 +14,14 @@ Creates a view of Tickitz mockup using HTML,CSS & Tailwind
 
 ## Screenshots
 
-![App Screenshot](/img/profile)
+![App Screenshot](/img/profile.PNG)
+screenshoot of profile page
 
+![App Screenshot](/img/orderhistory.PNG)
+screenshoot of order history page
+
+![App Screenshot](/img/modal.PNG)
+screenshoot of modal feature
+
+![App Screenshot](/img/viewall.PNG)
+screenshoot of list movie page
