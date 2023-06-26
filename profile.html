@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>View All</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css" rel="stylesheet" />
+    <title>Profile</title>
     <script>
         tailwind.config = {
             theme: {
@@ -16,6 +17,7 @@
                     }, 
                     spacing : {
                         '105' : '26.25rem',
+                        '128' : '32rem',
                     }
                 }
             }
@@ -30,59 +32,101 @@
                     <img class="md:h-12 h-10 md:w-auto" src="./img/Vector.png" alt="logo">
                 </a>
                 <div class="hidden md:flex md:gap-x-12">
-                    <a href="" class="text-sm font-medium text-gray-700 hover:text-gray-900">Home</a>
-                    <a href="" class="text-sm font-medium text-gray-700 hover:text-gray-900">List Movie</a>
+                    <a href="home.html" class="text-sm font-medium text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="viewall.html" class="text-sm font-medium text-gray-700 hover:text-gray-900">List Movie</a>
                 </div>
             </div>
-            <div class="hidden lg:flex lg:justify-end ">
-                <a href="" class="text-sm inline-block rounded-md bg-primary border border-transparent px-8 py-3 text-center text-white">Sign Up</a>
+            <div class="hidden lg:flex lg:items-center lg:gap-x-12 lg:justify-end ">
+                <a data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="cursor-pointer"><img src="img/search.png" alt=""></a>
+                 <a  id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" class="cursor-pointer"><img src="img/Ellipse 11.png" alt=""></a>
+                <!-- DROPDOWN MENU PROFILE SECTION -->
+                <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                      <li>
+                        <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                      </li>
+                      <li>
+                        <a href="order_history.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Order History</a>
+                      </li>
+                      <li>
+                        <a href="payment_page.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Order List</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                      </li>
+                    </ul>
+                </div>
+                <!-- DROPDOWN MENU PROFILE END SECTION -->
             </div>
             <div class="flex justify-end lg:hidden">
-                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
+            </button>
+            <div id="dropdown" class="flex w-full z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="w-full items-center py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <li >
+                        <input type="text" class="w-4/5 ml-20 mb-10 items-center" placeholder="Search...">
+                    </li>
+                  <li>
+                    <a href="home.html" class="block w-full text-center py-3 border border-gray text-black font-sans font-bold">Home</a>
+                  </li>
+                  <li>
+                    <a href="viewall.html" class="block w-full text-center py-3 border border-gray text-black font-sans font-bold">List Movie</a>
+                  </li>
+                  <li>
+                    <a href="profile.html" class="block w-full text-center py-3 border border-gray text-black font-sans font-bold">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block w-full text-center py-3 border border-gray text-black font-sans font-bold">Log out</a>
+                  </li>
+                  <li>
+                    <p class="text-center font-sans py-3 border border-gray">&#169; 2020 Tickitz. All Rights Reserved</p>
+                  </li>
+                </ul>
+            </div>
         </nav>
        
     </header>
 
 
-    <main class="bg-secondary flex flex-row px-18 py-14 justify-center">
-        <div class="info w-1/4 h-105 bg-white rounded-lg border-transparent border mr-4">
+    <main class="bg-secondary flex flex-col md:flex-row px-18 py-14 justify-center items-center md:items-start">
+        <div class="w-3/4  md:w-1/4 h-128 bg-white rounded-lg border-transparent border md:mr-4 pb-10">
             <h3 class="font-medium text-gray-700 mx-10 my-10">INFO</h3>
             <div class="profile flex flex-col items-center justify-center">
                 <img src="/img/Ellipse 11.png" alt="profil" class="w-40 h-40">
                 <h3 class="font-medium mt-8 mb-1">Jonas El Rodriguez</h3>
                 <p class="">Moviegoers</p>
-                <hr class="">
+                <div class="border-b-2 border-horizontal w-full mt-10 mb-5"></div>
                 <a href="" class="inline-block px-20 py-2 border border-black rounded-lg bg-primary text-white">Logout</a>
-            
             </div>
             
         </div>
-        <div class="order w-2/3 bg-secondary rounded-lg border-transparent border flex flex-col gap-y-12">
-            <div class="box-border w-full bg-white rounded-lg py-5 flex flex-row gap-x-14">
+        <div class="w-3/4 md:w-2/3 bg-secondary rounded-lg border-transparent border flex flex-col gap-y-12">
+            <div class="box-border w-full bg-white rounded-lg py-5 hidden md:flex flex-row gap-x-14">
                 <a href="profile.html" class="text-black ml-10 py-5 border-b-2 border-primary">Account Settings</a>
                 <a href="order_history.html" class="text-gray-300  py-5 hover:border-b-2 hover:border-primary hover:text-black delay-150">Order History</a>
             </div>
+            <h1 class="font-sans font-bold text-xl mt-8 md:hidden">Account Settings</h1>
             <div class="box-border w-full bg-white rounded-lg"> 
                 <h3 class="mt-10 ml-8 mb-4 font-normal">Details Information</h3>
                 <div class="border-b-2 border-horizontal w-5/6 ml-8"></div>
-                <div class="form-card flex flex-row flex-wrap ml-8 mt-12 mr-8 pb-16">
-                    <div class="form w-1/2">
+                <div class="form-card flex flex-col md:flex-row flex-wrap ml-8 mt-12 mr-8 pb-16">
+                    <div class="form w-full md:w-1/2">
                         <p class="mb-3">First Name</p>
                         <input type="text" class="border border-gray rounded-lg w-3/4 text-black px-3 py-3 mb-6 " placeholder="Jonas">
                     </div>
-                    <div class="form w-1/2">
+                    <div class="form w-full md:w-1/2">
                         <p class="mb-3">Last Name</p>
                         <input type="text" class="border border-gray rounded-lg w-3/4 text-black px-3 py-3 mb-6" placeholder="El Rodriguez">
                     </div>
-                    <div class="form w-1/2">
+                    <div class="form w-full md:w-1/2">
                         <p class="mb-3">E-mail</p>
                         <input type="text" class="border border-gray rounded-lg w-3/4 text-black px-3 py-3 mb-6" placeholder="Jonasrodrigu123@gmail.com">
                     </div>
-                    <div class="form w-1/2">
+                    <div class="form w-full md:w-1/2">
                         <p class="mb-3">Phone Number</p>
                         <input type="text" class="border border-gray rounded-lg w-3/4 text-black px-3 py-3 mb-6" placeholder="+62 81445687121">
                     </div>
@@ -91,12 +135,12 @@
             <a href="" class="w-1/2 box-border bg-primary rounded-full text-center text-white py-4">Update Changes</a>
             <div class="box-border w-full bg-white pb-16 rounded-lg"> 
                 <h3 class="mt-10 ml-8 mb-10">Account and Privacy</h3>
-                <div class="flex flex-row gap-x-8">
-                    <div class="w-1/2 ml-8">
+                <div class="flex flex-col md:flex-row gap-y-6 gap-x-8">
+                    <div class="w-full  md:w-1/2 ml-8">
                         <h3>New Password</h3>
                         <input class="border border-gray rounded-lg w-3/4 px-3 py-3" type="password" placeholder="Write Your Password">
                     </div>
-                    <div class="w-1/2 ">
+                    <div class="w-full md:w-1/2 ml-8 ">
                         <h3>Confirm Password</h3>
                         <input class="border border-gray rounded-lg w-3/4 px-3 py-3" type="password" placeholder="Confirm Your Password">
                     </div>
@@ -111,47 +155,81 @@
 
 
 
-    <footer class="bg-white flex flex-col ">
-        <div class="flex flex-row justify-around pt-24">
+    <footer class="bg-white flex flex-col ml-10">
+        <div class="flex-col flex md:flex-row justify-around pt-24">
           <div>
               <img src="./img/Vector.png" alt="logo" class="mb-4">
-              <p class="text-grey-400">Stop waiting in line. Buy tickets <br>conveniently, watch movies quietly</p>
+              <p class="text-grey-400 mb-10">Stop waiting in line. Buy tickets <br>conveniently, watch movies quietly</p>
           </div>
           <div class="flex flex-col">
-              <h3 class="font-medium mb-8">Explore</h3>
-              <a href="" class="mb-4">Home</a>
-              <a href="">List Movie</a>
+              <h3 class="font-medium  md:mb-8 mb-3">Explore</h3>
+              <div class="flex-row flex mb-10 md:flex-col">
+                  <a href="" class="mb-4">Home</a>
+                  <a href="">List Movie</a>
+              </div>
           </div>
           <div>
               <h3 class="font-medium mb-8">Our Sponsor</h3>
-              <img src="./img/sponsor1.png" alt="" class="mb-6">
-              <img src="./img/sponsor2.png" alt="" class="mb-6" >
-              <img src="./img/sponsor3.png" alt="">
+              <div class="flex flex-row gap-x-10 md:flex-col md:items-start">
+                  <img src="./img/sponsor1.png" alt="" class="mb-6 max-h-10 object-contain">
+                  <img src="./img/sponsor2.png" alt="" class="mb-6 max-h-10 object-contain" >
+                  <img src="./img/sponsor3.png" alt=  "" class="max-h-10 object-contain">
+              </div>
           </div>
           <div class="social-media">
               <h3 class="font-medium mb-8">Follow us</h3>
-              <div class="flex gap-x-4 mb-6">
-                  <img src="./img/fb.png" >
-                  <p>Tickitz Cinema id</p>
-              </div>
-              
-              <div class="flex gap-x-4 mb-6">
-                  <img src="/img/instagram.png" >
-                  <p>tickitz.id</p>
-              </div>
-              
-              <div class="flex gap-x-4 mb-6">
-                  <img src="/img/twitter.png" >
-                  <p>tickitz.id</p>
-              </div>
-              
-              <div class="flex gap-x-4 ">
-                  <img src="/img/youtube.png" >
-                  <p>Tickitz Cinema id</p>
+              <div class="flex flex-row gap-x-10 md:flex-col">
+                  <div class="flex gap-x-4 mb-6">
+                      <img src="./img/fb.png" class="object-contain max-h-5">
+                      <p class="hidden md:text-sm md:flex">Tickitz Cinema id</p>
+                  </div>
+                  
+                  <div class="flex gap-x-4 mb-6">
+                      <img src="/img/instagram.png" class="object-contain max-h-5">
+                      <p class="hidden md:text-sm md:flex">tickitz.id</p>
+                  </div>
+                  
+                  <div class="flex gap-x-4 mb-6">
+                      <img src="/img/twitter.png" class="object-contain max-h-5" >
+                      <p class="hidden md:text-sm md:flex">tickitz.id</p>
+                  </div>
+                  
+                  <div class="flex gap-x-4 ">
+                      <img src="/img/youtube.png" class="object-contain max-h-5" >
+                      <p class="hidden md:text-sm md:flex">Tickitz Cinema id</p>
+                  </div>
               </div>
           </div>
         </div>
         <p class="text-center pb-12 pt-12">&#169; 2020 Tickitz. All Rights Reserved</p>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+       <!-- MODAL SECTION -->
+       <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                    <input type="text" class="w-full" placeholder="Search Movie ...">
+                    
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6">
+                    <h1 class="font-bold font-sans text-2xl">
+                       Recent
+                    </h1>
+                    <button class="w-full text-left border border-gray py-4 px-2 text-primary hover:text-white hover:bg-primary font-bold rounded-lg">Avengers:End Game</button>
+                    <button class="w-full text-left border border-gray py-4 px-2 text-primary hover:text-white hover:bg-primary font-bold rounded-lg">Spider-Man:Homecoming</button>
+                    <button class="w-full text-left border border-gray py-4 px-2 text-primary hover:text-white hover:bg-primary font-bold rounded-lg">Avengers:endgame</button>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <img src="img/Vector.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF MODAL SECTION -->
 </body>
 </html>
